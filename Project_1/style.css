@@ -1,0 +1,219 @@
+/*css3 - attribute selectors,  psuedo classes (p:nth-child(), regular expressions, non pseudo classess (:not(selector) { style properties } */
+/* regular expression example -> p[name^="kid"] { color: red; } , looks for attribute name where kid is the first word as in kidos and make that paragraph red. p[name$="kid"] { color: red }, this would look for kid at the end of a word. p[name*="kid"] would look for kid anywhere in the word.*/
+/* selecting elements of a parent element using > symbol*/
+/* + selector, p.one + p { color: red } , choose paragraph after the first one where paragrpah class is one. */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+header, section, footer, aside, nav, article, hgroup {
+	display: block;
+}
+body {
+	width: 100%;  /*always include, to be able to use flexible boxes*/
+	display: -webkit-box; /*always include, to be able to use flexible boxes*/
+	-webkit-box-pack: center; /*instead of using margin to center*/
+}
+#wrapper {
+	max-width: 1000px;
+	margin: 20px 0px;
+	display: -webkit-box; 
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;
+	-webkit-border-radius: 10px;
+}
+#head {
+	background: #33CCCC;
+	border: 1px solid black;
+	padding: 20px;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: rgb(110,110,110) 5px 5px 8px inset;
+	font: bold 30px Times new roman;
+	text-align: center;
+	text-shadow: rgb(110,110,110) 3px 3px 3px;
+}
+article {
+	border: 1px solid black;
+	display: -webkit-box;
+	padding: 10px;
+	margin: 10px;
+	-webkit-box-orient: vertical;
+	-webkit-box-flex: 1;
+	-webkit-border-radius: 10px;
+}
+#navigation {
+	border: 1px solid black;
+	background: -webkit-linear-gradient(top,#6B9990,#A6C2BC);
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: rgb(110,110,110) 5px 5px 20px;
+}
+#navigation li {
+	display: inline-block;
+	list-style: none;
+	padding: 8px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+#new {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-border-radius: 10px;
+	background: -webkit-radial-gradient(center,circle,#4DB8B8 2%, #B8E3E3 50%);
+}
+#main {
+	border: 1px solid black;
+	-webkit-box-flex: 1;
+	padding: 30px;
+	-webkit-border-radius: 10px;
+}
+.example {
+	-webkit-transform: translate(300px, 30px) rotate(30deg) scale(.5);
+	width: 500px;
+	background: #C0C0C0;
+	font-size: 30px;
+	text-align: center;
+}
+p.animate {
+	margin: 0px auto;
+	border: 2px solid black;
+	width: 100px;
+	height: 75px;
+	background: #C2FFE0;
+	text-align: center;
+	color: #990000;
+	font-size: 20px;
+	-webkit-border-radius: 10px;
+	-webkit-transition: -webkit-transform 2s, opacity 2s, background 2s, width 2s, height 2s;
+}
+p.animate:hover {
+	-webkit-transform: rotate(360deg);
+	opacity: 1;
+	background: #FF4D94;
+	width: 450px;
+	height: 110px;
+}
+
+#side_box {
+	border: 1px solid green;
+	width: 200px;
+	padding: 10px;
+	margin: 10px;
+	-webkit-border-radius: 10px;
+}
+
+video {
+	width: 200px;
+	height: 200px;
+
+}
+p#first {
+	color: #000099;
+	font-weight: bold;
+	font-size: 20px;
+	border: 1px dotted red;
+	background: #FFEBFF;
+	padding: 5px;
+	width: 200px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+p#second {
+	color: #000099;
+	font-weight: bold;
+	font-size: 20px;
+	border: 1px dotted red;
+	background: #FFEBFF;
+	padding: 5px;
+	width: 200px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+p#last {
+	color: #000099;
+	font-weight: bold;
+	font-size: 20px;
+	border: 1px dotted red;
+	background: #FFEBFF;
+	padding: 5px;
+	width: 200px;
+	text-align: center;
+	margin-bottom: 5px;
+}
+#div1, #div2 {
+	width: 100px;
+	height: 60px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	border: 1px double black;
+}
+h2#audio {
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+audio#audio {
+	width: 200px;
+}
+
+h2#storage {
+	margin-top: 50px;
+}
+#leftbox {
+	padding: 20px;
+	border: 2px solid green;
+}
+#rightbox {
+	margin-top: 10px;
+	border: 2px solid red;
+	padding: 5px;
+}
+#button {
+	background: blue;
+	color: white;
+	width: 60px;
+	padding: 2px;
+}
+#copyright {
+	text-align: center;
+	padding: 20px;
+	border-top: 1px solid black;
+	margin-top: 20px;
+}
+@media (max-width: 500px) {
+	header#head {
+		padding: 15px;
+	}
+	header h1 {
+		font-size: 30px;
+		font-weight: bold;
+		text-shadow: none;
+	}
+	section#main {
+		padding:0;
+	}
+	section#main h1 {
+		font-size: 15px;
+	}
+	section#main h2 {
+		font-size: 18px;
+		font-weight: normal;
+	}
+	p.animate {
+		width: 75px;
+		height: 40px;
+		font-size: 15px;
+		margin-top: 30px;
+	}
+	p.animate:hover {
+		width: 300px;
+	}
+	p#first, P#second, p#last {
+		width: 100px;
+		font-size: 15px;
+	}
+	#div1, #div2, img#drag1 {
+		width: 80px;
+	}
+}

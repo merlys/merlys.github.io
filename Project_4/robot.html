@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML and CSS ROBOT</title>
+	<script src="jquery-1.11.3.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		/*div {
+			height: 150px;
+			width: 300px;
+			background: #CC5;
+			margin: 0 auto;
+		}*/
+		.robot {
+			position: relative;
+			left: 200px;
+		}
+		.beep {
+			width: 5px;
+			height: 0;
+			border: 5px solid transparent;
+			border-top: 10px solid #777;
+			border-bottom: 80px solid #888;
+			position: relative;
+			left: 140px;
+		}
+		@keyframes blink {
+			50% {
+				background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+			}
+		}
+		@-webkit-keyframes blink {
+			50% {
+				background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+			}
+		}
+		@-moz-keyframes blink {
+			50% {
+				background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+			}
+		}
+		.laser {
+			animation: blink .5s infinite;
+			-webkit-animation: blink .5s infinite;
+			-moz-animation: blink .5s infinite;
+		}
+		.brain {
+			background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+			background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+			background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+			background-size: 50% 100%; /*or 75px 150px*/
+			width: 150px;
+			height: 150px;
+			border-bottom: 40px double #665;
+			border-radius: 60px 60px 10px 10px;
+			position: relative;
+			left: 70px;
+		}
+		.torso {
+			height: 0;
+			width: 140px;
+			border-top: 300px solid #bc6;
+			border-left: 75px solid transparent;
+			border-right: 75px solid transparent;
+			border-radius: 20px 20px 100px 100px;
+		}
+		.left {
+			font-family: 'Poller one', verdana, arial, sans-serif;
+			font-weight: bold;
+			font-size: 250px;
+			color: #665;
+			transform: rotate(200deg);
+			-webkit-transform: rotate(200deg);
+			-moz-transform: rotate(200deg);
+			position: relative;
+			left: -190px;
+			top: -320px;
+			z-index: -1;
+		}
+		.right {
+			font-family: 'Poller one', verdana, arial, sans-serif;
+			font-weight: bold;
+			font-size: 250px;
+			color: #665;
+			transform: scaleY(-1) rotate(20deg);
+			-webkit-transform: scaleY(-1) rotate(20deg);
+			-moz-transform: scaleY(-1) rotate(20deg);
+			z-index: -1;
+			position: relative;
+			top: -620px;
+			left: 190px;
+		}
+		.foot {
+			height: 40px;
+			width: 40px;
+			background: #CCC;
+			border-radius: 40px; /*half the length radius makes perfect circle*/
+			border: 15px solid rgb(72, 72, 72);
+			position: relative;
+			left: 110px;
+			top: -10px;
+			z-index: -1;
+		}
+		@keyframes dance {
+			from {
+				left: 800px;
+			}
+		}
+		@-webkit-keyframes dance {
+			from {
+				left: 800px;
+			}
+		}
+		@-moz-keyframes dance {
+			from {
+				left: 800px;
+			}
+		}
+		img {
+			animation: dance 5s infinite;
+			-webkit-animation: dance 4s infinite;
+			-moz-animation: dance 4s infinite;
+			position: absolute;
+			top: 200px;
+			left: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div class="robot">
+		<div class="beep"></div>
+		<div class="brain"></div>
+		<div class="torso">
+			<div class="left">j</div>
+			<div class="right">j</div>
+		</div>
+		<div class="foot"></div>
+	</div>
+
+	<button class="flash">Laser Eyes On/Off</button>
+	<button class="color">Color!</button>
+	<button class="moves">Dance</button>
+	<p><a href="https://dash.generalassemb.ly">Follow this tutorial and more at General Assembly</a></p>
+	<p><a href="..//portfolio.html">Back to My Portfolio</a></p>
+
+	<img src="http://bestanimations.com/Sci-Fi/Robots/animated-robot-1.gif" alt="dancing robot here">
+
+	<script type="text/javascript">
+		<!-- tell jquery, when you hear a click on the .flash class, toggle the class .laser on .brain (in short, when eyes button is clicked, toggle laser class) -->
+
+		$('.flash').click(function() {
+			$('.brain').toggleClass('laser');
+		});
+		
+		// When color button is clicked, pick a number 0-255
+		$('.color').click(function() {
+			var red = Math.floor(Math.random() * 255);
+			var green = Math.floor(Math.random() * 255);
+			var blue = Math.floor(Math.random() * 255);
+
+			var randomRGBA = 'rgba(' + red + ',' + green + ',' + blue + ',1)';
+
+			$('body').css('background', randomRGBA);
+		});
+
+		$('.moves').click(function() {
+			$('img').toggle();
+		});
+</script>
+</body>
+</html>

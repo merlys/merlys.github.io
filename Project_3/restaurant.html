@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant</title>
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body {
+			font-family: helvetica, sans-serif;
+			max-width: 600px;
+			margin: 0 auto;
+			background: #232323;
+		}
+		div {
+			height: 200px;
+			background-size: cover;
+			position: relative;
+			margin-top: 40px;
+			border-radius: 12px;
+		}
+		.first {
+			background: url("tomatochutney.png");
+			background-size: cover;
+		}
+		.second {
+			background: url("chickenroast.png");
+			background-size: cover;
+		}
+		.dessert {
+			background: url("fruitcustard.png");
+			background-size: cover;
+		}
+		p {
+			color: rgba(255, 255, 255, 1);
+			background: rgba(0, 0, 0, 0.7);
+			background: linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+			background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+			background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+			padding: 10px;
+			text-align: justify;
+			line-height: 28px;
+			position: absolute;
+			bottom: 0;
+			margin: 0;
+			height: 30px;
+			transition: height .5s;
+			-webkit-transition: height .5s;
+			-moz-transition: height .5s;
+		}
+		small {
+			opacity: 0;
+		}
+		.show-description p {
+			height: 150px;
+		}
+		.show-description small {
+			opacity: 1;
+		}
+		.price {
+			float: right;
+		}
+		h1 {
+			font-family: 'Londrina Shadow', cursive;
+			font-size: 75px;
+			text-align: center;
+			margin: 60px 0 0 0;
+			color: #aaaaaa;
+		}
+		h2 {
+			text-align: center;
+			margin: 0px 0 70px 0;
+			color: #bbbbbb;
+		}
+
+		h3 {
+    			color: white;
+    			font-weight: bolder;
+    		}
+    		
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 50px;
+				margin-top: 20px;
+				line-height: 40px;
+			}
+			h2 {
+				font-size: 20px;
+				margin: 20px 0 30px 0;
+			}
+			div {
+				margin: 20px 12px 0 12px;
+			}
+			p {
+      			font-size: 20px;
+      			line-height: 24px;
+    		}
+    		small {
+      			font-size: 16px;
+    		}
+    		h3 {
+    			color: white;
+    			font-weight: bolder;
+    		}
+		}
+	</style>
+</head>
+<body>
+	<h1>Amma's Restaurant</h1>
+	<h2>A Seattle City Eatery</h2>
+	<a href="../portfolio.html"><h3>Back to Portfolio</h3></a>
+
+	<div class="first">
+		<p>Tomato Pachadi / Chutney <span class="price">$4</span><br>
+			<small>A side dish that can be paired with rice or flat bread.  Tomatoes sauteed in butter and blended in with a pureed coconut and spices.</small>
+		</p>
+	</div>
+	<div class="second">
+		<P>Chicken Roast <span class="price">$12</span><br>
+			<small>Goes well with rice pancakes, puttu, or rice.  Chicken pieces are lightly fried in olive oil and slow cooked in sauteed onions, herbs, and spices.</small>
+		</P>
+	</div>
+	<div class="dessert">
+		<p>Custardy Fruit Pudding <span class="price">$7</span><br>
+			<small>Local farm fresh oragnic ingredients, eggs, milk, and seasonal fruits give this custardy fruity pudding fushion a home made taste and feel.</small>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		$('div').on('click', function() {
+			$(this).toggleClass('show-description');
+		});
+
+	</script>
+</body>
+</html>

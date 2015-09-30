@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to My Webpage!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="javascript.js"></script>
+</head>
+<body>
+<div id="wrapper">
+
+	<header id="head">
+		<h1>Flexible Box Model</h1>
+	</header>
+
+	<nav id="navigation">
+		<ul>
+			<li>Home</li>
+			<li><a href="../portfolio.html">My Portfolio</a></li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+
+	<div id="new">
+		<section id="main">
+			<article>
+				<header>
+					<hgroup>
+						<h1>HTML5 & CSS3</h1>
+						<h2>Animation</h2>
+					</hgroup>
+				</header>
+				<p class="animate">Hover over this!</p>
+				<p class="example">CSS3 Transform Example</p>
+				<footer>
+					<p>- by Merly</p>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<hgroup>
+						<h1>JAVASCRIPT & HTML5</h1>
+						<h2>Query and more....</h2>
+					</hgroup>
+				</header>
+				<p id="first">Click Me!</p>
+				<p id="second">Click Me!</p>
+				<p id="second">Click Me!</p>
+				<p id="last">Me! Me!</p>
+				<footer>
+					<p>- by Merly</p>
+				</footer>
+			</article>
+			<article>
+				<header>
+					<hgroup>
+						<h1>More Fun</h1>
+						<h2>Try Dragging and Dropping the image into the empty box</h2>
+					</hgroup>
+				</header>
+					<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						<img src="flowers.png" id="drag1" width="80" height="60" draggable="true" ondragstart="drag(event)">
+					</div>
+					<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+				<footer>
+					<p>- by Merly</p>
+				</footer>
+			</article>
+		</section>
+
+		<aside id="side_box">
+			<h2>In the News</h2>
+			New video feature!
+			<video src="video.mp4" poster="" controls loop></video>
+
+			<h2 id="audio">Audio Feature</h2>
+			<audio id="audio" controls="controls">
+				<source src="piano.mp3" type="audio/mpeg">
+				This browser does not support HTML5 audio!
+			</audio>
+
+			<h2 id="storage">Web Storage</h2>
+			<section id="leftbox">
+			<form>
+				<p>Name: <input type="text" id="one"></p>
+				<p>Your Message: <textarea id="two"></textarea></p>
+				<p><input type="button" id="button" value="Save"></p>
+			</form>
+			</section>
+			<section id="rightbox">
+				Display Results!
+			</section>
+		</aside>
+	</div>
+
+	<footer id="copyright">
+		Copyright &copy: 2015 My Web Studio
+	</footer>
+</div>
+</body>
+</html>
