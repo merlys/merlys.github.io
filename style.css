@@ -5,7 +5,7 @@ body {
 
 	.main {
 		height: 700px;
-		background-image: url(images/background2.jpg); 
+		background-image: url(http://images.all-free-download.com/images/graphicthumb/abstract_blue_background_vector_graphic_4_148030.jpg); 
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -17,28 +17,6 @@ body {
 		margin: 0 auto;
 	}
 }
-
-/*@media screen and (min-width:320px) and (max-width:999px) {*/
-	/*body {
-		height: 100%;
-		width: 100%;
-	}*/
-
-	/*.main {
-		height: 100%;
-		width: 100%;
-		background-image: url(images/background2.jpg); 
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}*/
-
-	/*#container {
-		height: 700px;
-		width: 400px;
-		margin: 0 auto;
-	}*/
-/*}*/
 
 .header {
 	margin-top: 0px;
@@ -59,7 +37,7 @@ nav {
 }
 
 .navbar {
-	color: black;
+	color: #501935;
 	font-weight: bolder;
 	font-size: 20px;
 	margin-left: 25px;
@@ -100,7 +78,7 @@ h2 {
 #portfoliohead {
 	width: 100%;
 	height: 350px;
-	background-image: url(images/background2.jpg);
+	background-image: url(http://images.all-free-download.com/images/graphicthumb/abstract_blue_background_vector_graphic_4_148030.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
