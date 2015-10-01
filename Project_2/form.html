@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>Sign in Form</title>
+	<style type="text/css">
+		#container {
+			font-family: Arial;
+			margin: 20px auto;
+			max-width: 700px;
+			border: 2px solid black;
+			padding: 30px;
+			font-size: 20px;
+			background-color: #7A9CBD;
+		}
+
+		label {
+			width: 200px;
+			display: inline-block;
+
+		}
+
+		input {
+			width: 400px;
+			min-height: 20px;
+			font-size: 17px;
+			border: 1px solid black;
+		}
+
+		input.button {
+			width: 100px;
+			margin-top: 20px;
+			float: right;
+		}
+
+   		input.gender {
+   			width: 10px;
+   		}
+
+   		input.checkbox {
+   			width: 20px;
+   		}
+
+   		select {
+   			font-size: 20px;
+   		}
+
+   		textarea {
+   			font-size: 15px;
+   			min-width: 400px;
+   			vertical-align: top;
+   		}
+
+
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<form action="myfirstpage.html">
+			<label>First Name:</label><input type="text" name="firstname" placeholder="Enter your first name here"><br><br>
+			<label>Last Name:</label><input type="text" name="lastname" placeholder="Enter your last name here"><br><br>
+			<label>Gender:</label><input class="gender" type="radio" name="sex" value="male">Male <input class="gender" type="radio" name="sex" value="male">Female<br><br>
+
+			<label>Hobbies/Interests:</label><input class="checkbox" type="checkbox" name="hobby" value="Kickboxing">Kickboxing
+			<input class="checkbox" type="checkbox" name="hobby" value="Zumba">Zumba
+			<input class="checkbox" type="checkbox" name="hobby" value="Cars">Cars
+			<input class="checkbox" type="checkbox" name="hobby" value="Reading">Reading  <br><br>
+
+			<label>Favorite Color:</label>
+			<select name="colors">
+				<option value="red">Red</option>
+				<option value="white">White</option>
+				<option value="blue">Blue</option>
+				<option value="black">Black</option>
+				<option value="yellow">Yellow</option>
+				<option value="orange">Orange</option>
+			</select><br><br>
+
+			<label>Favorite Quote:</label>
+			<textarea name="quote" rows="5" placeholder="Enter your favorite quote here...........
+
+			We cannot do great things.  We can only do little things with great love - Mother Teresa"></textarea><br><br>
+			<label>Password:</label><input type="password" name="password" placeholder="Enter a valid password"><br><br>
+			<label>Confirm Password:</label><input type="password" name="password" placeholder="Enter your password again to comfirm"><br><br>
+			<input class="button" type="submit" name="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
