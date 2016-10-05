@@ -3,38 +3,103 @@
 <head>
 	<meta charset = "UTF-8">
 	<title>Convert Fahrenheit to Celsius</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<style type="text/css">
 		#largeBox1, #largeBox2 {
-			width: 400px;
+			width: 390px;
 			height: 150px;
 			border: 1px solid black;
 			margin: 50px auto;
 			background-color: #afafb9;
 		}
-		#fah1, #fah2, #cel1, #cel2 {
+		#fahInBox1, #fahInBox2, #celInBox1, #celInBox2 {
 			width: 190px;
 			float: left;
 			text-align: center;
 			margin-top: 20px;
 			font-size: 30px;
 		}
+		input {
+			width: 90px;
+			padding-left: 10px;
+			margin-top: 10px;
+			margin-left: 30px;
+		}
+		.glyphicon1 {
+			margin-left: 20px;
+			cursor: pointer;
+		}
+		#celNumberInBox1 {
+			margin-left: 0;
+			margin-top: 10px;
+		}
+		.glyphicon2 {
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		#celNumberInBox2 {
+			margin-left: 40px;
+		}
+		#fahNumberInBox2 {
+			margin-top: 10px;
+		}
+		p {
+			margin: 0 auto;
+			text-align: center;
+			margin-top: -20px;
+		}
 	</style>
-	<link rel="stylesheet" href="merlys.github.io/font-awesome-4.6.3.zip">
 </head>
 <body>
 	<div id="largeBox1">
-		<div id="fah1">
+		<div id="fahInBox1">
 			Fahrenheit
-			<input id="fahNumber1" type="number" value="32">
-			<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+			<input id="fahNumberInBox1" type="number" value="32">
+  		<span class="glyphicon glyphicon-arrow-right glyphicon1" id="glyphicon1" onclick=f2c(); aria-hidden="true"></span>
 		</div>
-		<div id="cel1">Celsius</div>
+		<div id="celInBox1">
+			Celsius
+			<div id="celNumberInBox1">0</div>
+		</div>
 	</div>
-		<div id="largeBox2">
-		<div id="cel2">Celsius</div>
-		<div id="fah2">Fahrenheit</div>
+	<div id="largeBox2">
+		<div id="celInBox2">
+			Celsius
+			<input id="celNumberInBox2" type="number" value="0">
+		<span class="glyphicon glyphicon-arrow-right glyphicon2" id="glyphicon2" onclick=c2f(); aria-hidden="true"></span>
+		</div>
+		<div id="fahInBox2">
+			Fahrenheit
+			<div id="fahNumberInBox2">32</div>
+		</div>
 	</div>
+	<p>*Enter the temperature in the left box and click arrow to convert</p>
+
 	<script type="text/javascript">
+		// convert f to c
+		function f2c() {
+			var f1 = document.getElementById('fahNumberInBox1').value;
+			var c1 = (f1-32)*5/9;
+			if(c1 === 0 || c1 === 100) {
+				c1 = c1;
+			} else {
+				c1 = c1.toFixed(3);
+			}
+			document.getElementById("celNumberInBox1").innerHTML = c1;
+		}
+		// convert c to f
+		function c2f() {
+			var c2 = document.getElementById("celNumberInBox2").value;
+			var f2 = c2 * 9/5 + 32;
+			if(f2 === 0 || f2 === 32) {
+				f2 = f2;
+			} else {
+				f2 = f2.toFixed(3);
+			}
+			document.getElementById("fahNumberInBox2").innerHTML = f2; 
+		}
+
 
 
 	</script>
