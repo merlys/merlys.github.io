@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Convert Fahrenheit to Celsius or Celsius to Fahrenheit</title>
+	<style type="text/css">
+	* {
+		font-size: 20px;
+		color: green;
+	}
+		div {
+			text-align: center;
+			margin-top: 40px;
+		}
+		.button {
+			background-color: #d9f2e6;
+			font-size: 15px;
+			padding-top: 5px;
+		}
+		input {
+			font-size: 20px;
+			padding-left: 10px;
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- Convert F to c -->
+	<div>
+		Fahrenheit
+		<input type="text" value="32" id="fah1">
+		Celesius
+		<input type="text" value="0" id="cel1">
+		<input type="button" class="button" value="O" onclick="fToc()";>
+	</div>
+	<!-- Convert C to F -->
+	<div>
+		Celsius
+		<input type="text" value="0" id="cel2">
+		Fahrenheit
+		<input type="text" value="32" id="fah2">
+		<input type="button" class="button" value="O" onclick="cTof()";>
+	</div>
+	<!-- km into miles -->
+	<div>
+		Kilometer
+		<input type="text" value="1" id="kilom">
+		Mile
+		<input type="text" value="0.6214" id="mile">
+		<input type="button" class="button" value="O" onclick="kTom()";>
+	</div>
+	<!-- feet to meters -->
+	<div>
+		Foot
+		<input type="text" value="1" id="foot">
+		Meter
+		<input type="text" value="0.3048" id="meter">
+		<input type="button" class="button" value="O" onclick="fTom()";>
+	</div>
+<script type="text/javascript">
+function fToc() {
+	var fahren = document.getElementById("fah1").value;
+	var celsius = (fahren - 32) * 5/9;
+	document.getElementById("cel1").value = celsius;
+}
+
+function cTof() {
+	var celsius = document.getElementById("cel2").value;
+	var fahren = celsius * 9/5 + 32;
+	document.getElementById("fah2").value = fahren;
+}
+
+function kTom() {
+	var kilometer = document.getElementById("kilom").value;
+	var mile = kilometer * 0.6214;
+	document.getElementById("mile").value = mile;
+}
+
+function fTom() {
+	var foot = document.getElementById("foot").value;
+	var meter = foot * 0.3048;
+	document.getElementById("meter").value = meter;
+}
+</script>
+</body>
+</html>
